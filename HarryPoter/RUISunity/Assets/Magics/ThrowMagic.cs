@@ -24,6 +24,7 @@ namespace HarryPotter.Magics
 
 		public override void Effect()
 		{
+
 			try
 			{
 				Magic magicToThrow = magics.Dequeue();

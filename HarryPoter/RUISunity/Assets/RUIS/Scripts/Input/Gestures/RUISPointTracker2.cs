@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class RUISPointTracker2 : MonoBehaviour {
 	public GameObject hand;
@@ -13,6 +14,7 @@ public class RUISPointTracker2 : MonoBehaviour {
 		public float deltaTime;
 		public Vector3 velocity;
 		public float startTime;
+
 		
 		public PointData(Vector3 position, Quaternion rotation, float deltaTime, float startTime, PointData previous)
 		{
@@ -42,6 +44,19 @@ public class RUISPointTracker2 : MonoBehaviour {
 	
 	float timeSinceLastUpdate = 0;
 
+	public float AverageCord(int cord)
+	{
+		switch (cord) {
+		case 1:
+			return points.Average(x=>x.position.x);
+		case 2:
+			return points.Average(x=>x.position.y);
+		case 3:
+			return points.Average (x=>x.position.z);
+		default:
+			return 0;
+		}
+	}
 
 	private Transform[] colliders;
 	public GameObject pathsColls;

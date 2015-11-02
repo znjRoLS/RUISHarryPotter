@@ -20,7 +20,7 @@ namespace HarryPotter.Magics
 
 		public VMagic (string magicName, int cooldown) : base(magicName)
 		{
-			hand = GameObject.FindGameObjectWithTag ("hand");
+			hand = GameObject.FindGameObjectWithTag ("elbow");
 			if (hand == null)
 				Debug.Log ("null hand");
 			lightningObject = GameObject.FindGameObjectWithTag ("lightningObject");
@@ -39,26 +39,38 @@ namespace HarryPotter.Magics
 			RaycastHit rHit;
 
 			ray.origin = hand.transform.position;
-			ray.direction = hand.transform.forward;
+			ray.direction = -hand.transform.forward;
 
-			Physics.Raycast (ray, out rHit);
+			bool hit = Physics.Raycast (ray, out rHit);
+
+			Debug.Log ( "rhit logs " + rHit );
 
 			GameObject lightning = (GameObject)MonoBehaviour.Instantiate(lightningObject);
 			
-			//lightning.transform.position = (hand.transform.position + rHit.transform.position)/2;
+			if (hit) {
+				lightning.transform.position = (hand.transform.position + rHit.point)/2;
+				Debug.Log ("transform hand " + hand.transform.position);
+				Debug.Log ("transform light " + lightning.transform.position);
+				Debug.Log ("transform rhit " + rHit.point);
+				Debug.DrawLine ( hand.transform.position, rHit.point, Color.red, 1000.0f );
+				Debug.DrawRay (hand.transform.position, hand.transform.forward, Color.red);
+			}
+			else
+				lightning.transform.position = (hand.transform.position + Vector3.forward * 10)/2;
 
-			lightning.transform.position = (hand.transform.position + Vector3.forward * 100)/2;
 
-			lightning.transform.position += Vector3.down * 5;
 
-			//Vector3 pathBetween = rHit.transform.position - hand.transform.position;
-			Vector3 pathBetween = Vector3.forward * 100;
-			
-			lightning.transform.eulerAngles = new Vector3(90,180  + Mathf.Rad2Deg * Mathf.Atan( (float)pathBetween.x / pathBetween.z ),180 );
+			//lightning.transform.position += Vector3.down * 5;
+
+			Vector3 pathBetween = rHit.point - hand.transform.position;
+			//Vector3 pathBetween = Vector3.forward * 100;
+
+			lightning.transform.eulerAngles = new Vector3 (0,0,0);
+			//lightning.transform.eulerAngles = new Vector3(90,180  + Mathf.Rad2Deg * Mathf.Atan( (float)pathBetween.x / pathBetween.z ),180 );
 			
 			lightning.transform.localScale = pathBetween.magnitude/80 * Vector3.one;
 
-			MonoBehaviour.Destroy ( lightning , 0.5f);
+			MonoBehaviour.Destroy ( lightning , 100f);
 		}
 	}
 }

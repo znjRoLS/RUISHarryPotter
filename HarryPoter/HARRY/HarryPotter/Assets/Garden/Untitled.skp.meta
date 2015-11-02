@@ -1,0 +1,1083 @@
+fileFormatVersion: 2
+guid: 209051ee09e3e5345ab074ad802f452f
+timeCreated: 1441658162
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000d3010000d4010000d5010000d6010000d7010000d8010000d9010000da010000db010000dc010000dd010000de010000df010000e0010000e1010000e2010000e3010000e4010000e5010000e6010000e7010000e8010000e9010000ea010000
+  assetHash:
+    serializedVersion: 2
+    Hash: c3762cc019a7f4d79d0cb1f76ac7a1b9
+  longitude: -105.283
+  latitude: 40.017000000000003
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -12.4816923, y: 9.73176193, z: -14.3774652}
+      lookAt: {x: -5.84405756, y: 4.77095699, z: -4.75342083}
+      up: {x: .221772999, y: .92055434, z: .32155323}
+      fov: 30
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: arm
+    100002: arm 1
+    100004: arm 10
+    100006: arm 11
+    100008: arm 2
+    100010: arm 3
+    100012: arm 4
+    100014: arm 5
+    100016: arm 6
+    100018: arm 7
+    100020: arm 8
+    100022: arm 9
+    100024: board
+    100026: board 1
+    100028: board 10
+    100030: board 11
+    100032: board 12
+    100034: board 13
+    100036: board 14
+    100038: board 15
+    100040: board 16
+    100042: board 17
+    100044: board 18
+    100046: board 19
+    100048: board 2
+    100050: board 20
+    100052: board 21
+    100054: board 22
+    100056: board 23
+    100058: board 3
+    100060: board 4
+    100062: board 5
+    100064: board 6
+    100066: board 7
+    100068: board 8
+    100070: board 9
+    100072: board#1
+    100074: board#1 1
+    100076: board#1 10
+    100078: board#1 100
+    100080: board#1 101
+    100082: board#1 102
+    100084: board#1 103
+    100086: board#1 104
+    100088: board#1 105
+    100090: board#1 106
+    100092: board#1 107
+    100094: board#1 108
+    100096: board#1 109
+    100098: board#1 11
+    100100: board#1 110
+    100102: board#1 111
+    100104: board#1 112
+    100106: board#1 113
+    100108: board#1 114
+    100110: board#1 115
+    100112: board#1 116
+    100114: board#1 117
+    100116: board#1 118
+    100118: board#1 119
+    100120: board#1 12
+    100122: board#1 120
+    100124: board#1 121
+    100126: board#1 122
+    100128: board#1 123
+    100130: board#1 124
+    100132: board#1 125
+    100134: board#1 13
+    100136: board#1 14
+    100138: board#1 15
+    100140: board#1 16
+    100142: board#1 17
+    100144: board#1 18
+    100146: board#1 19
+    100148: board#1 2
+    100150: board#1 20
+    100152: board#1 21
+    100154: board#1 22
+    100156: board#1 23
+    100158: board#1 24
+    100160: board#1 25
+    100162: board#1 26
+    100164: board#1 27
+    100166: board#1 28
+    100168: board#1 29
+    100170: board#1 3
+    100172: board#1 30
+    100174: board#1 31
+    100176: board#1 32
+    100178: board#1 33
+    100180: board#1 34
+    100182: board#1 35
+    100184: board#1 36
+    100186: board#1 37
+    100188: board#1 38
+    100190: board#1 39
+    100192: board#1 4
+    100194: board#1 40
+    100196: board#1 41
+    100198: board#1 42
+    100200: board#1 43
+    100202: board#1 44
+    100204: board#1 45
+    100206: board#1 46
+    100208: board#1 47
+    100210: board#1 48
+    100212: board#1 49
+    100214: board#1 5
+    100216: board#1 50
+    100218: board#1 51
+    100220: board#1 52
+    100222: board#1 53
+    100224: board#1 54
+    100226: board#1 55
+    100228: board#1 56
+    100230: board#1 57
+    100232: board#1 58
+    100234: board#1 59
+    100236: board#1 6
+    100238: board#1 60
+    100240: board#1 61
+    100242: board#1 62
+    100244: board#1 63
+    100246: board#1 64
+    100248: board#1 65
+    100250: board#1 66
+    100252: board#1 67
+    100254: board#1 68
+    100256: board#1 69
+    100258: board#1 7
+    100260: board#1 70
+    100262: board#1 71
+    100264: board#1 72
+    100266: board#1 73
+    100268: board#1 74
+    100270: board#1 75
+    100272: board#1 76
+    100274: board#1 77
+    100276: board#1 78
+    100278: board#1 79
+    100280: board#1 8
+    100282: board#1 80
+    100284: board#1 81
+    100286: board#1 82
+    100288: board#1 83
+    100290: board#1 84
+    100292: board#1 85
+    100294: board#1 86
+    100296: board#1 87
+    100298: board#1 88
+    100300: board#1 89
+    100302: board#1 9
+    100304: board#1 90
+    100306: board#1 91
+    100308: board#1 92
+    100310: board#1 93
+    100312: board#1 94
+    100314: board#1 95
+    100316: board#1 96
+    100318: board#1 97
+    100320: board#1 98
+    100322: board#1 99
+    100324: board#2
+    100326: board#2 1
+    100328: board#2 10
+    100330: board#2 11
+    100332: board#2 2
+    100334: board#2 3
+    100336: board#2 4
+    100338: board#2 5
+    100340: board#2 6
+    100342: board#2 7
+    100344: board#2 8
+    100346: board#2 9
+    100348: board#3
+    100350: board#3 1
+    100352: board#3 10
+    100354: board#3 11
+    100356: board#3 12
+    100358: board#3 13
+    100360: board#3 14
+    100362: board#3 15
+    100364: board#3 16
+    100366: board#3 17
+    100368: board#3 18
+    100370: board#3 19
+    100372: board#3 2
+    100374: board#3 20
+    100376: board#3 21
+    100378: board#3 22
+    100380: board#3 23
+    100382: board#3 24
+    100384: board#3 25
+    100386: board#3 26
+    100388: board#3 27
+    100390: board#3 28
+    100392: board#3 29
+    100394: board#3 3
+    100396: board#3 4
+    100398: board#3 5
+    100400: board#3 6
+    100402: board#3 7
+    100404: board#3 8
+    100406: board#3 9
+    100408: board#6
+    100410: board#6 1
+    100412: board#6 10
+    100414: board#6 11
+    100416: board#6 2
+    100418: board#6 3
+    100420: board#6 4
+    100422: board#6 5
+    100424: board#6 6
+    100426: board#6 7
+    100428: board#6 8
+    100430: board#6 9
+    100432: Component#1
+    100434: Component#1 1
+    100436: Fountain_Base_Quarter
+    100438: Fountain_Base_Quarter 1
+    100440: Fountain_Base_Quarter 2
+    100442: Fountain_Base_Quarter 3
+    100444: Fountain_Spray
+    100446: Fountain_Spray 1
+    100448: Fountain_Spray 2
+    100450: Fountain_Spray 3
+    100452: Fountain_Spray 4
+    100454: Fountain_Spray 5
+    100456: Fountain_Spray 6
+    100458: Fountain_Spray 7
+    100460: Fountain_Water
+    100462: Fountain_Water 1
+    100464: Fountain_Water 2
+    100466: Fountain_Water 3
+    100468: Group 12
+    100470: Group 16
+    100472: Group 4
+    100474: Group 8
+    100476: ske24
+    100478: ske24 1
+    100480: ske24 2
+    100482: ske24 3
+    100484: ske25
+    100486: ske25 1
+    100488: ske25 2
+    100490: ske25 3
+    100492: ske25 4
+    100494: ske25 5
+    100496: ske26
+    100498: //RootNode
+    400000: arm
+    400002: arm 1
+    400004: arm 10
+    400006: arm 11
+    400008: arm 2
+    400010: arm 3
+    400012: arm 4
+    400014: arm 5
+    400016: arm 6
+    400018: arm 7
+    400020: arm 8
+    400022: arm 9
+    400024: board
+    400026: board 1
+    400028: board 10
+    400030: board 11
+    400032: board 12
+    400034: board 13
+    400036: board 14
+    400038: board 15
+    400040: board 16
+    400042: board 17
+    400044: board 18
+    400046: board 19
+    400048: board 2
+    400050: board 20
+    400052: board 21
+    400054: board 22
+    400056: board 23
+    400058: board 3
+    400060: board 4
+    400062: board 5
+    400064: board 6
+    400066: board 7
+    400068: board 8
+    400070: board 9
+    400072: board#1
+    400074: board#1 1
+    400076: board#1 10
+    400078: board#1 100
+    400080: board#1 101
+    400082: board#1 102
+    400084: board#1 103
+    400086: board#1 104
+    400088: board#1 105
+    400090: board#1 106
+    400092: board#1 107
+    400094: board#1 108
+    400096: board#1 109
+    400098: board#1 11
+    400100: board#1 110
+    400102: board#1 111
+    400104: board#1 112
+    400106: board#1 113
+    400108: board#1 114
+    400110: board#1 115
+    400112: board#1 116
+    400114: board#1 117
+    400116: board#1 118
+    400118: board#1 119
+    400120: board#1 12
+    400122: board#1 120
+    400124: board#1 121
+    400126: board#1 122
+    400128: board#1 123
+    400130: board#1 124
+    400132: board#1 125
+    400134: board#1 13
+    400136: board#1 14
+    400138: board#1 15
+    400140: board#1 16
+    400142: board#1 17
+    400144: board#1 18
+    400146: board#1 19
+    400148: board#1 2
+    400150: board#1 20
+    400152: board#1 21
+    400154: board#1 22
+    400156: board#1 23
+    400158: board#1 24
+    400160: board#1 25
+    400162: board#1 26
+    400164: board#1 27
+    400166: board#1 28
+    400168: board#1 29
+    400170: board#1 3
+    400172: board#1 30
+    400174: board#1 31
+    400176: board#1 32
+    400178: board#1 33
+    400180: board#1 34
+    400182: board#1 35
+    400184: board#1 36
+    400186: board#1 37
+    400188: board#1 38
+    400190: board#1 39
+    400192: board#1 4
+    400194: board#1 40
+    400196: board#1 41
+    400198: board#1 42
+    400200: board#1 43
+    400202: board#1 44
+    400204: board#1 45
+    400206: board#1 46
+    400208: board#1 47
+    400210: board#1 48
+    400212: board#1 49
+    400214: board#1 5
+    400216: board#1 50
+    400218: board#1 51
+    400220: board#1 52
+    400222: board#1 53
+    400224: board#1 54
+    400226: board#1 55
+    400228: board#1 56
+    400230: board#1 57
+    400232: board#1 58
+    400234: board#1 59
+    400236: board#1 6
+    400238: board#1 60
+    400240: board#1 61
+    400242: board#1 62
+    400244: board#1 63
+    400246: board#1 64
+    400248: board#1 65
+    400250: board#1 66
+    400252: board#1 67
+    400254: board#1 68
+    400256: board#1 69
+    400258: board#1 7
+    400260: board#1 70
+    400262: board#1 71
+    400264: board#1 72
+    400266: board#1 73
+    400268: board#1 74
+    400270: board#1 75
+    400272: board#1 76
+    400274: board#1 77
+    400276: board#1 78
+    400278: board#1 79
+    400280: board#1 8
+    400282: board#1 80
+    400284: board#1 81
+    400286: board#1 82
+    400288: board#1 83
+    400290: board#1 84
+    400292: board#1 85
+    400294: board#1 86
+    400296: board#1 87
+    400298: board#1 88
+    400300: board#1 89
+    400302: board#1 9
+    400304: board#1 90
+    400306: board#1 91
+    400308: board#1 92
+    400310: board#1 93
+    400312: board#1 94
+    400314: board#1 95
+    400316: board#1 96
+    400318: board#1 97
+    400320: board#1 98
+    400322: board#1 99
+    400324: board#2
+    400326: board#2 1
+    400328: board#2 10
+    400330: board#2 11
+    400332: board#2 2
+    400334: board#2 3
+    400336: board#2 4
+    400338: board#2 5
+    400340: board#2 6
+    400342: board#2 7
+    400344: board#2 8
+    400346: board#2 9
+    400348: board#3
+    400350: board#3 1
+    400352: board#3 10
+    400354: board#3 11
+    400356: board#3 12
+    400358: board#3 13
+    400360: board#3 14
+    400362: board#3 15
+    400364: board#3 16
+    400366: board#3 17
+    400368: board#3 18
+    400370: board#3 19
+    400372: board#3 2
+    400374: board#3 20
+    400376: board#3 21
+    400378: board#3 22
+    400380: board#3 23
+    400382: board#3 24
+    400384: board#3 25
+    400386: board#3 26
+    400388: board#3 27
+    400390: board#3 28
+    400392: board#3 29
+    400394: board#3 3
+    400396: board#3 4
+    400398: board#3 5
+    400400: board#3 6
+    400402: board#3 7
+    400404: board#3 8
+    400406: board#3 9
+    400408: board#6
+    400410: board#6 1
+    400412: board#6 10
+    400414: board#6 11
+    400416: board#6 2
+    400418: board#6 3
+    400420: board#6 4
+    400422: board#6 5
+    400424: board#6 6
+    400426: board#6 7
+    400428: board#6 8
+    400430: board#6 9
+    400432: Component#1
+    400434: Component#1 1
+    400436: Fountain_Base_Quarter
+    400438: Fountain_Base_Quarter 1
+    400440: Fountain_Base_Quarter 2
+    400442: Fountain_Base_Quarter 3
+    400444: Fountain_Spray
+    400446: Fountain_Spray 1
+    400448: Fountain_Spray 2
+    400450: Fountain_Spray 3
+    400452: Fountain_Spray 4
+    400454: Fountain_Spray 5
+    400456: Fountain_Spray 6
+    400458: Fountain_Spray 7
+    400460: Fountain_Water
+    400462: Fountain_Water 1
+    400464: Fountain_Water 2
+    400466: Fountain_Water 3
+    400468: Group 12
+    400470: Group 16
+    400472: Group 4
+    400474: Group 8
+    400476: ske24
+    400478: ske24 1
+    400480: ske24 2
+    400482: ske24 3
+    400484: ske25
+    400486: ske25 1
+    400488: ske25 2
+    400490: ske25 3
+    400492: ske25 4
+    400494: ske25 5
+    400496: ske26
+    400498: //RootNode
+    2300000: arm
+    2300002: arm 1
+    2300004: arm 10
+    2300006: arm 11
+    2300008: arm 2
+    2300010: arm 3
+    2300012: arm 4
+    2300014: arm 5
+    2300016: arm 6
+    2300018: arm 7
+    2300020: arm 8
+    2300022: arm 9
+    2300024: board
+    2300026: board 1
+    2300028: board 10
+    2300030: board 11
+    2300032: board 12
+    2300034: board 13
+    2300036: board 14
+    2300038: board 15
+    2300040: board 16
+    2300042: board 17
+    2300044: board 18
+    2300046: board 19
+    2300048: board 2
+    2300050: board 20
+    2300052: board 21
+    2300054: board 22
+    2300056: board 23
+    2300058: board 3
+    2300060: board 4
+    2300062: board 5
+    2300064: board 6
+    2300066: board 7
+    2300068: board 8
+    2300070: board 9
+    2300072: board#1
+    2300074: board#1 1
+    2300076: board#1 10
+    2300078: board#1 100
+    2300080: board#1 101
+    2300082: board#1 102
+    2300084: board#1 103
+    2300086: board#1 104
+    2300088: board#1 105
+    2300090: board#1 106
+    2300092: board#1 107
+    2300094: board#1 108
+    2300096: board#1 109
+    2300098: board#1 11
+    2300100: board#1 110
+    2300102: board#1 111
+    2300104: board#1 112
+    2300106: board#1 113
+    2300108: board#1 114
+    2300110: board#1 115
+    2300112: board#1 116
+    2300114: board#1 117
+    2300116: board#1 118
+    2300118: board#1 119
+    2300120: board#1 12
+    2300122: board#1 120
+    2300124: board#1 121
+    2300126: board#1 122
+    2300128: board#1 123
+    2300130: board#1 124
+    2300132: board#1 125
+    2300134: board#1 13
+    2300136: board#1 14
+    2300138: board#1 15
+    2300140: board#1 16
+    2300142: board#1 17
+    2300144: board#1 18
+    2300146: board#1 19
+    2300148: board#1 2
+    2300150: board#1 20
+    2300152: board#1 21
+    2300154: board#1 22
+    2300156: board#1 23
+    2300158: board#1 24
+    2300160: board#1 25
+    2300162: board#1 26
+    2300164: board#1 27
+    2300166: board#1 28
+    2300168: board#1 29
+    2300170: board#1 3
+    2300172: board#1 30
+    2300174: board#1 31
+    2300176: board#1 32
+    2300178: board#1 33
+    2300180: board#1 34
+    2300182: board#1 35
+    2300184: board#1 36
+    2300186: board#1 37
+    2300188: board#1 38
+    2300190: board#1 39
+    2300192: board#1 4
+    2300194: board#1 40
+    2300196: board#1 41
+    2300198: board#1 42
+    2300200: board#1 43
+    2300202: board#1 44
+    2300204: board#1 45
+    2300206: board#1 46
+    2300208: board#1 47
+    2300210: board#1 48
+    2300212: board#1 49
+    2300214: board#1 5
+    2300216: board#1 50
+    2300218: board#1 51
+    2300220: board#1 52
+    2300222: board#1 53
+    2300224: board#1 54
+    2300226: board#1 55
+    2300228: board#1 56
+    2300230: board#1 57
+    2300232: board#1 58
+    2300234: board#1 59
+    2300236: board#1 6
+    2300238: board#1 60
+    2300240: board#1 61
+    2300242: board#1 62
+    2300244: board#1 63
+    2300246: board#1 64
+    2300248: board#1 65
+    2300250: board#1 66
+    2300252: board#1 67
+    2300254: board#1 68
+    2300256: board#1 69
+    2300258: board#1 7
+    2300260: board#1 70
+    2300262: board#1 71
+    2300264: board#1 72
+    2300266: board#1 73
+    2300268: board#1 74
+    2300270: board#1 75
+    2300272: board#1 76
+    2300274: board#1 77
+    2300276: board#1 78
+    2300278: board#1 79
+    2300280: board#1 8
+    2300282: board#1 80
+    2300284: board#1 81
+    2300286: board#1 82
+    2300288: board#1 83
+    2300290: board#1 84
+    2300292: board#1 85
+    2300294: board#1 86
+    2300296: board#1 87
+    2300298: board#1 88
+    2300300: board#1 89
+    2300302: board#1 9
+    2300304: board#1 90
+    2300306: board#1 91
+    2300308: board#1 92
+    2300310: board#1 93
+    2300312: board#1 94
+    2300314: board#1 95
+    2300316: board#1 96
+    2300318: board#1 97
+    2300320: board#1 98
+    2300322: board#1 99
+    2300324: board#2
+    2300326: board#2 1
+    2300328: board#2 10
+    2300330: board#2 11
+    2300332: board#2 2
+    2300334: board#2 3
+    2300336: board#2 4
+    2300338: board#2 5
+    2300340: board#2 6
+    2300342: board#2 7
+    2300344: board#2 8
+    2300346: board#2 9
+    2300348: board#3
+    2300350: board#3 1
+    2300352: board#3 10
+    2300354: board#3 11
+    2300356: board#3 12
+    2300358: board#3 13
+    2300360: board#3 14
+    2300362: board#3 15
+    2300364: board#3 16
+    2300366: board#3 17
+    2300368: board#3 18
+    2300370: board#3 19
+    2300372: board#3 2
+    2300374: board#3 20
+    2300376: board#3 21
+    2300378: board#3 22
+    2300380: board#3 23
+    2300382: board#3 24
+    2300384: board#3 25
+    2300386: board#3 26
+    2300388: board#3 27
+    2300390: board#3 28
+    2300392: board#3 29
+    2300394: board#3 3
+    2300396: board#3 4
+    2300398: board#3 5
+    2300400: board#3 6
+    2300402: board#3 7
+    2300404: board#3 8
+    2300406: board#3 9
+    2300408: board#6
+    2300410: board#6 1
+    2300412: board#6 10
+    2300414: board#6 11
+    2300416: board#6 2
+    2300418: board#6 3
+    2300420: board#6 4
+    2300422: board#6 5
+    2300424: board#6 6
+    2300426: board#6 7
+    2300428: board#6 8
+    2300430: board#6 9
+    2300432: Fountain_Base_Quarter
+    2300434: Fountain_Base_Quarter 1
+    2300436: Fountain_Base_Quarter 2
+    2300438: Fountain_Base_Quarter 3
+    2300440: Fountain_Spray
+    2300442: Fountain_Spray 1
+    2300444: Fountain_Spray 2
+    2300446: Fountain_Spray 3
+    2300448: Fountain_Spray 4
+    2300450: Fountain_Spray 5
+    2300452: Fountain_Spray 6
+    2300454: Fountain_Spray 7
+    2300456: Fountain_Water
+    2300458: Fountain_Water 1
+    2300460: Fountain_Water 2
+    2300462: Fountain_Water 3
+    2300464: Group 12
+    2300466: Group 16
+    2300468: Group 4
+    2300470: Group 8
+    2300472: ske24
+    2300474: ske24 1
+    2300476: ske24 2
+    2300478: ske24 3
+    2300480: //RootNode
+    3300000: arm
+    3300002: arm 1
+    3300004: arm 10
+    3300006: arm 11
+    3300008: arm 2
+    3300010: arm 3
+    3300012: arm 4
+    3300014: arm 5
+    3300016: arm 6
+    3300018: arm 7
+    3300020: arm 8
+    3300022: arm 9
+    3300024: board
+    3300026: board 1
+    3300028: board 10
+    3300030: board 11
+    3300032: board 12
+    3300034: board 13
+    3300036: board 14
+    3300038: board 15
+    3300040: board 16
+    3300042: board 17
+    3300044: board 18
+    3300046: board 19
+    3300048: board 2
+    3300050: board 20
+    3300052: board 21
+    3300054: board 22
+    3300056: board 23
+    3300058: board 3
+    3300060: board 4
+    3300062: board 5
+    3300064: board 6
+    3300066: board 7
+    3300068: board 8
+    3300070: board 9
+    3300072: board#1
+    3300074: board#1 1
+    3300076: board#1 10
+    3300078: board#1 100
+    3300080: board#1 101
+    3300082: board#1 102
+    3300084: board#1 103
+    3300086: board#1 104
+    3300088: board#1 105
+    3300090: board#1 106
+    3300092: board#1 107
+    3300094: board#1 108
+    3300096: board#1 109
+    3300098: board#1 11
+    3300100: board#1 110
+    3300102: board#1 111
+    3300104: board#1 112
+    3300106: board#1 113
+    3300108: board#1 114
+    3300110: board#1 115
+    3300112: board#1 116
+    3300114: board#1 117
+    3300116: board#1 118
+    3300118: board#1 119
+    3300120: board#1 12
+    3300122: board#1 120
+    3300124: board#1 121
+    3300126: board#1 122
+    3300128: board#1 123
+    3300130: board#1 124
+    3300132: board#1 125
+    3300134: board#1 13
+    3300136: board#1 14
+    3300138: board#1 15
+    3300140: board#1 16
+    3300142: board#1 17
+    3300144: board#1 18
+    3300146: board#1 19
+    3300148: board#1 2
+    3300150: board#1 20
+    3300152: board#1 21
+    3300154: board#1 22
+    3300156: board#1 23
+    3300158: board#1 24
+    3300160: board#1 25
+    3300162: board#1 26
+    3300164: board#1 27
+    3300166: board#1 28
+    3300168: board#1 29
+    3300170: board#1 3
+    3300172: board#1 30
+    3300174: board#1 31
+    3300176: board#1 32
+    3300178: board#1 33
+    3300180: board#1 34
+    3300182: board#1 35
+    3300184: board#1 36
+    3300186: board#1 37
+    3300188: board#1 38
+    3300190: board#1 39
+    3300192: board#1 4
+    3300194: board#1 40
+    3300196: board#1 41
+    3300198: board#1 42
+    3300200: board#1 43
+    3300202: board#1 44
+    3300204: board#1 45
+    3300206: board#1 46
+    3300208: board#1 47
+    3300210: board#1 48
+    3300212: board#1 49
+    3300214: board#1 5
+    3300216: board#1 50
+    3300218: board#1 51
+    3300220: board#1 52
+    3300222: board#1 53
+    3300224: board#1 54
+    3300226: board#1 55
+    3300228: board#1 56
+    3300230: board#1 57
+    3300232: board#1 58
+    3300234: board#1 59
+    3300236: board#1 6
+    3300238: board#1 60
+    3300240: board#1 61
+    3300242: board#1 62
+    3300244: board#1 63
+    3300246: board#1 64
+    3300248: board#1 65
+    3300250: board#1 66
+    3300252: board#1 67
+    3300254: board#1 68
+    3300256: board#1 69
+    3300258: board#1 7
+    3300260: board#1 70
+    3300262: board#1 71
+    3300264: board#1 72
+    3300266: board#1 73
+    3300268: board#1 74
+    3300270: board#1 75
+    3300272: board#1 76
+    3300274: board#1 77
+    3300276: board#1 78
+    3300278: board#1 79
+    3300280: board#1 8
+    3300282: board#1 80
+    3300284: board#1 81
+    3300286: board#1 82
+    3300288: board#1 83
+    3300290: board#1 84
+    3300292: board#1 85
+    3300294: board#1 86
+    3300296: board#1 87
+    3300298: board#1 88
+    3300300: board#1 89
+    3300302: board#1 9
+    3300304: board#1 90
+    3300306: board#1 91
+    3300308: board#1 92
+    3300310: board#1 93
+    3300312: board#1 94
+    3300314: board#1 95
+    3300316: board#1 96
+    3300318: board#1 97
+    3300320: board#1 98
+    3300322: board#1 99
+    3300324: board#2
+    3300326: board#2 1
+    3300328: board#2 10
+    3300330: board#2 11
+    3300332: board#2 2
+    3300334: board#2 3
+    3300336: board#2 4
+    3300338: board#2 5
+    3300340: board#2 6
+    3300342: board#2 7
+    3300344: board#2 8
+    3300346: board#2 9
+    3300348: board#3
+    3300350: board#3 1
+    3300352: board#3 10
+    3300354: board#3 11
+    3300356: board#3 12
+    3300358: board#3 13
+    3300360: board#3 14
+    3300362: board#3 15
+    3300364: board#3 16
+    3300366: board#3 17
+    3300368: board#3 18
+    3300370: board#3 19
+    3300372: board#3 2
+    3300374: board#3 20
+    3300376: board#3 21
+    3300378: board#3 22
+    3300380: board#3 23
+    3300382: board#3 24
+    3300384: board#3 25
+    3300386: board#3 26
+    3300388: board#3 27
+    3300390: board#3 28
+    3300392: board#3 29
+    3300394: board#3 3
+    3300396: board#3 4
+    3300398: board#3 5
+    3300400: board#3 6
+    3300402: board#3 7
+    3300404: board#3 8
+    3300406: board#3 9
+    3300408: board#6
+    3300410: board#6 1
+    3300412: board#6 10
+    3300414: board#6 11
+    3300416: board#6 2
+    3300418: board#6 3
+    3300420: board#6 4
+    3300422: board#6 5
+    3300424: board#6 6
+    3300426: board#6 7
+    3300428: board#6 8
+    3300430: board#6 9
+    3300432: Fountain_Base_Quarter
+    3300434: Fountain_Base_Quarter 1
+    3300436: Fountain_Base_Quarter 2
+    3300438: Fountain_Base_Quarter 3
+    3300440: Fountain_Spray
+    3300442: Fountain_Spray 1
+    3300444: Fountain_Spray 2
+    3300446: Fountain_Spray 3
+    3300448: Fountain_Spray 4
+    3300450: Fountain_Spray 5
+    3300452: Fountain_Spray 6
+    3300454: Fountain_Spray 7
+    3300456: Fountain_Water
+    3300458: Fountain_Water 1
+    3300460: Fountain_Water 2
+    3300462: Fountain_Water 3
+    3300464: Group 12
+    3300466: Group 16
+    3300468: Group 4
+    3300470: Group 8
+    3300472: ske24
+    3300474: ske24 1
+    3300476: ske24 2
+    3300478: ske24 3
+    3300480: //RootNode
+    4300000: Mesh Untitled
+    4300002: Mesh ske24
+    4300004: Mesh Group 4
+    4300006: Mesh board
+    4300008: Mesh board#3
+    4300010: Mesh board#1
+    4300012: Mesh board#2
+    4300014: Mesh arm
+    4300016: Mesh board#6
+    4300018: Mesh Fountain_Base_Quarter
+    4300020: Mesh Fountain_Water
+    4300022: Mesh Fountain_Spray
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

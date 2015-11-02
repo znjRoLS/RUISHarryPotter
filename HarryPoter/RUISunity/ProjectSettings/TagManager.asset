@@ -8,6 +8,10 @@ TagManager:
   - StatusText
   - hand
   - lightningObject
+  - head
+  - elbow
+  - neck
+  - sfera
   layers:
   - Default
   - TransparentFX

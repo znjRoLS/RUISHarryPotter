@@ -1,0 +1,118 @@
+Initialize engine version: 5.2.0f3 (e7947df39b5c)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 980 (ID=0x13c0)
+    Vendor:   NVIDIA
+    VRAM:     3977 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\OpenNI.Net.dll (this message is harmless)
+Loading C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\OpenNI.Net.dll into Unity Child Domain
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.178 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1920x1200 59Hz; virtual: 1920x1200 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Nordeus\Desktop\HarryPoter\RUISunity\Avax_Data\Managed\System.Xml.dll (this message is harmless)
+1 HEHE
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+XML validation finished for inputConfig.xml!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Kinect is disabled from RUISInputManager.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+PS Move is disabled from RUISInputManager.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Razer Hydra is disabled from RUISInputManager. Disabling object SixenseInput that has the SixenseInput script.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Disabling PS Move wand: PSMoveWand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Disabling Razer Hydra wand: RazerHydraWand
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+OculusDK2HeadTracker (RUISTracker)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Found the best head tracker with regard to enabled devices in RUISInputManager! Using OculusDK2HeadTracker for tracking head position, and disabling the following: RotationOnlyTracker, Kinect2HeadTracker, KinectHeadTracker, MobileRazerHeadTracker, PSMoveHeadTracker, RazerHeadTracker. This choice was made using a pre-selected list of head trackers.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+No RUISDisplay attached to the RUISHeadTrackerAssigner script!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Assigned RUISCamera component from the child of OculusDK2HeadTracker to render on MainDisplay because that RUISDisplay component's RUISCamera field was empty.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+XML validation finished for calibration.xml!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Disabling MouseWand GameObject 'MouseWand' because the following input devices were found: Kinect 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+XML validation finished for defaultDisplay.xml!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Reading gestures...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+C:\Users\Nordeus\Downloads\gestures.txt
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Gestures read!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Oculus Rift enabled in RUISCamera, forcing stereo to display: MainDisplay
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: e70 -> priority: 1 
+  Thread -> id: e74 -> priority: 1 
+Updated Kinect 2 floor normal (0.0, 1.0, 0.0) and floor distance (0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Disconnect
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Disconnect
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

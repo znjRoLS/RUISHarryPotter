@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 4c0e8a03482f1614bbbbb8a92891eaef
+timeCreated: 1441569935
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 88046ca53e2cf21ffb54387b30f4a3fb
+  longitude: 2.3330000000000002
+  latitude: 48.866999999999997
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 5.00532389, y: 1.68673229, z: -2.16454315}
+      lookAt: {x: -12.9734154, y: -37.9096947, z: 173.32692}
+      up: {x: -.0223200619, y: .975723147, z: .217867374}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 3D Death Eater Mask
+    100002: Group 1
+    100004: Group 11
+    100006: Group 19
+    100008: Group 22
+    100010: Group 9
+    100012: 'Harry Potter :  Harry Potter''s Wand'
+    100014: Jedi Master Qui-Gon Jinn
+    100016: ma_empero2
+    100018: ma_empero3
+    100020: ma_empero4
+    100022: ma_emperor
+    100024: ma_quiGon4
+    100026: //RootNode
+    100028: skp13AD
+    100030: skp78
+    400000: 3D Death Eater Mask
+    400002: Group 1
+    400004: Group 11
+    400006: Group 19
+    400008: Group 22
+    400010: Group 9
+    400012: 'Harry Potter :  Harry Potter''s Wand'
+    400014: Jedi Master Qui-Gon Jinn
+    400016: ma_empero2
+    400018: ma_empero3
+    400020: ma_empero4
+    400022: ma_emperor
+    400024: ma_quiGon4
+    400026: //RootNode
+    400028: skp13AD
+    400030: skp78
+    2300000: Group 11
+    2300002: Group 19
+    2300004: Group 22
+    2300006: Group 9
+    2300008: ma_empero2
+    2300010: ma_empero3
+    2300012: ma_empero4
+    2300014: ma_quiGon4
+    3300000: Group 11
+    3300002: Group 19
+    3300004: Group 22
+    3300006: Group 9
+    3300008: ma_empero2
+    3300010: ma_empero3
+    3300012: ma_empero4
+    3300014: ma_quiGon4
+    4300000: Mesh ma_quiGon4
+    4300002: Mesh ma_empero2
+    4300004: Mesh Group 9
+    4300006: Mesh Group 11
+    4300008: Mesh ma_empero3
+    4300010: Mesh ma_empero4
+    4300012: Mesh Group 19
+    4300014: Mesh Group 22
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

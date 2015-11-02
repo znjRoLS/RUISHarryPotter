@@ -17,8 +17,10 @@ public class RUISMotionGesture : RUISGestureRecognizer
 	DtwGestureRecognizer dtwGestures;
 
 	RUISPointTracker2 ruisInput;
-
+	GameObject head;
 	double length;
+
+	public float distanceTreshold;
 
 	private bool gestureEnabled = false;
 
@@ -80,6 +82,8 @@ public class RUISMotionGesture : RUISGestureRecognizer
 				colliders [i] = pathsColls.transform.GetChild (i);
 			}
 		}
+
+		head = GameObject.FindGameObjectWithTag ("head");
 	}
 
 
@@ -90,14 +94,18 @@ public class RUISMotionGesture : RUISGestureRecognizer
 		//Debug.Log (System.Threading.Thread.CurrentThread.ManagedThreadId);
 		//Debug.Log (ruisInput.points [ruisInput.points.Count - 1].position);
 		gestureState = false;
-		if (ruisInput.points.Count > 10 && cnt == 0) 
+
+		if (ruisInput.points.Count > 10 && Mathf.Abs (ruisInput.AverageCord(3)-head.transform.position.z) > distanceTreshold) 
 		{	
 			//NOT SURE IF WE NEED TO check in each iteration. maybe once in some number 
 			string recognized = dtwGestures.Recognize (ruisInput.points, colliders);
+			Magic magic = MagicFactory.GetMagic("VShape");
+			magic.TryActivate();
 			if (!recognized.Contains ("UNKNOWN")) 
 			{	
-				Magic magic = MagicFactory.GetMagic(recognized);
-				magic.TryActivate();
+				Debug.Log (recognized);
+				//Magic magic = MagicFactory.GetMagic(recognized);
+				//magic.TryActivate();
 				gestureState = true;
 			}
 		}
