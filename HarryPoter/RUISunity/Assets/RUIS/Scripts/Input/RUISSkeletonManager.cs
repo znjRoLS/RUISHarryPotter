@@ -255,6 +255,7 @@ public class RUISSkeletonManager : MonoBehaviour {
 	void Update () 
 	{
 
+
 		if (inputManager.enableKinect) 
 		{
 			for (int i = 0; i < playerManager.m_MaxNumberOfPlayers; i++) 

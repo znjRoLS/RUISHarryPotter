@@ -126,6 +126,7 @@ public class RUISJumpGestureRecognizer : RUISGestureRecognizer
 
     private void DoJumping()
     {
+		Debug.Log ("JUUUUMP");
         currentState = State.AfterJump;
     }
 

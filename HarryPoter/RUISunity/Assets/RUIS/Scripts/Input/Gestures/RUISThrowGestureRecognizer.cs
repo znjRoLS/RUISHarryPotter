@@ -12,14 +12,17 @@ using System.Collections.Generic;
 using Joint = RUISSkeletonManager.Joint;
 using JointData = RUISSkeletonManager.JointData;
 using HarryPotter.Magics;
+using Kinect = Windows.Kinect;
 
 [RequireComponent(typeof(RUISPointTracker))]
 public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 {
+	
+	public GameObject SourceManager;
 	Magic magic;
 
 	int cnt2 = 0;
-	public int playerId = 0;
+	public int playerId = 1;
 	public int bodyTrackingDeviceID = 0;
 
 	public float requiredUpwardVelocity = 1.0f;
@@ -73,9 +76,13 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	public void Update()
 	{		
 		UpdatePoints ();
+
 		float angle = Vector3.Cross (hnd - el, el - shd).magnitude;
-		Debug.Log (angle);
-		Debug.Log ("shl " + shd + " hnd " + hnd);
+		Debug.Log ("angle " + angle);
+		Debug.Log ("shl " + shd.x + " hnd " + hnd.x);
+
+		Debug.Log ("pravi angle " + Vector3.Angle (hnd - el, el - shd));
+
 		if (!gestureEnabled)
 			return;
 
@@ -142,11 +149,44 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	
 	public void UpdatePoints()
 	{
-		if (skeletonManager) {
-			shd = skeletonManager.GetJointData(Joint.RightShoulder, playerId, bodyTrackingDeviceID).position;
-			el = skeletonManager.GetJointData(Joint.RightElbow, playerId, bodyTrackingDeviceID).position;
-			hnd = skeletonManager.GetJointData(Joint.RightHand, playerId, bodyTrackingDeviceID).position;
+
+		Windows.Kinect.Body[] nekibody = SourceManager.GetComponent<Kinect2SourceManager>().GetBodyData ();
+		if (nekibody != null && nekibody.Length > 0) {
+			int icnt = 0;
+			Vector3 tshd = Vector3.zero,thnd = Vector3.zero,tel = Vector3.zero;
+			for (int i = 0; i < nekibody.Length; i++)
+			{
+				if (nekibody[i].Joints[Kinect.JointType.ShoulderRight].Position.X != 0)
+			    {
+					icnt ++;
+					tshd = new Vector3(nekibody[i].Joints[Kinect.JointType.ShoulderRight].Position.X,
+					                  nekibody[i].Joints[Kinect.JointType.ShoulderRight].Position.Y,
+					                  nekibody[i].Joints[Kinect.JointType.ShoulderRight].Position.Z);
+					tel = new Vector3(nekibody[i].Joints[Kinect.JointType.ElbowRight].Position.X,
+					                 nekibody[i].Joints[Kinect.JointType.ElbowRight].Position.Y,
+					                 nekibody[i].Joints[Kinect.JointType.ElbowRight].Position.Z);
+					thnd = new Vector3(nekibody[i].Joints[Kinect.JointType.HandRight].Position.X,
+					                  nekibody[i].Joints[Kinect.JointType.HandRight].Position.Y,
+					                  nekibody[i].Joints[Kinect.JointType.HandRight].Position.Z);
+					//float x = nekibody[i].Joints[Kinect.JointType.ElbowRight].Position.X;
+					//Vector3 = nekibody[i]
+					//Debug.Log ("nekibody " + i + " ima " + nekibody[i].Joints[Kinect.JointType.ShoulderRight].Position.X);
+				}
+			}
+			if (icnt == 1)
+			{
+				shd = tshd;
+				el = tel;
+				hnd = thnd;
+			}
 		}
+
+		//if (skeletonManager) {
+		//
+		//	shd = skeletonManager.GetJointData(Joint.RightShoulder, playerId, bodyTrackingDeviceID).position;
+		//	el = skeletonManager.GetJointData(Joint.RightElbow, playerId, bodyTrackingDeviceID).position;
+		//	hnd = skeletonManager.GetJointData(Joint.RightHand, playerId, bodyTrackingDeviceID).position;
+		//}
 	}
 
 	public void ClearPoints()

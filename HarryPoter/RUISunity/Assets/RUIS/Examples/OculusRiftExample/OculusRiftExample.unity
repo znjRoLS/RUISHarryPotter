@@ -2778,6 +2778,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 580762127}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &594169790 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100014, guid: 7e2baee5779349340b6a78274c032bf7, type: 2}
+  m_PrefabInternal: {fileID: 1626278511}
 --- !u!1001 &618842800
 Prefab:
   m_ObjectHideFlags: 0
@@ -2946,6 +2950,10 @@ Prefab:
     - target: {fileID: 100118, guid: 2657edab8bf15334fb4b3866031359c1, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400112, guid: 2657edab8bf15334fb4b3866031359c1, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2657edab8bf15334fb4b3866031359c1, type: 2}
@@ -9224,6 +9232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a0241e1c295884cbed1aefe5b663a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SourceManager: {fileID: 594169790}
   playerId: 0
   bodyTrackingDeviceID: 0
   requiredUpwardVelocity: 1
