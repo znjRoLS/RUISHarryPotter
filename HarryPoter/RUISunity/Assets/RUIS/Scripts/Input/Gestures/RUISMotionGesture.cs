@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +14,9 @@ public class RUISMotionGesture : RUISGestureRecognizer
 
 	private int _minimumLength;
 
-	DtwGestureRecognizer dtwGestures;
+	DtwGestureRecognizer dtwOG;
+	DtwGestureRecognizer dtwV;
+	DtwGestureRecognizer dtwZ;
 
 	RUISPointTracker2 ruisInput;
 	GameObject head;
@@ -63,9 +65,12 @@ public class RUISMotionGesture : RUISGestureRecognizer
 	
 	void Start()
 	{
-		dtwGestures = new DtwGestureRecognizer (30, 3, 0);
+		dtwOG = new DtwGestureRecognizer (30, 3, 0);
+		dtwV = new DtwGestureRecognizer (30, 3, 0);
 		Debug.Log ("Reading gestures...");
-		dtwGestures.ReadAll (configFolderPath);
+		dtwOG.ReadAll (configFolderPath);
+		dtwV.ReadAll (configFolderPath);
+		dtwZ.ReadAll (configFolderPath);
 		Debug.Log ("Gestures read!");
 		ruisInput = (RUISPointTracker2) GetComponent ("RUISPointTracker2");
 	}
@@ -98,7 +103,7 @@ public class RUISMotionGesture : RUISGestureRecognizer
 		if (ruisInput.points.Count > 10 && Mathf.Abs (ruisInput.AverageCord(3)-head.transform.position.z) > distanceTreshold) 
 		{	
 			//NOT SURE IF WE NEED TO check in each iteration. maybe once in some number 
-			string recognized = dtwGestures.Recognize (ruisInput.points, colliders);
+			string recognized = Recognize (ruisInput.points, colliders);
 			Magic magic = MagicFactory.GetMagic("VShape");
 			magic.TryActivate();
 			if (!recognized.Contains ("UNKNOWN")) 
@@ -110,6 +115,32 @@ public class RUISMotionGesture : RUISGestureRecognizer
 			}
 		}
 
+	}
+
+	string Recognize(List<PointData> seq1,Transform[] colliders)
+	{
+		double minimum = double.PositiveInfinity;
+		string result = "UNKNOWN";
+		double v = dtwV.Recognize (seq1, colliders),
+		z = dtwZ.Recognize (seq1, colliders),
+		o = dtwOG.Recognize (seq1, colliders);
+		if (minimum > v) 
+		{
+			minimum = v;
+			result = "VShape";
+		}
+		if (minimum > z) 
+		{
+			minimum = z;
+			result = "ZShape";
+		}
+		if (minimum > o) 
+		{
+			minimum = o;
+			result = "OShape";
+		}
+
+		return result;
 	}
 
 	void GestureEvent()

@@ -20,21 +20,16 @@ namespace HarryPotter.Magics
 		public OMagic (string magicName, int cooldown) : base(magicName)
 		{
 			sphere = GameObject.FindGameObjectWithTag ("sfera");
-			if (sphere == null)
-			
-				Debug.Log ("WTF");
-			sphere.SetActive (false);
 			this.cooldown = cooldown;
 		}
 		
 		public override void Effect()
 		{
 			Debug.Log ("OOO SHAPRE");
-			/*GameObject sph = GameObject.Instantiate (sphere);
-			sph.SetActive (true);
+			GameObject sph = GameObject.Instantiate (sphere);
 			sph.transform.position = GameObject.FindGameObjectWithTag ("Player").transform.position;
-			sph.tag = "Sfeera";
-			GameObject.Destroy (sph, 10f);*/
+			sph.tag = "Shiled";
+			GameObject.Destroy (sph, 10f);
 		}
 	}
 }

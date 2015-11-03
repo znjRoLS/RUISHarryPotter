@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 
 Content    :   Implements a basic jump gesture
 Authors    :   Mikael Matveinen
@@ -65,7 +65,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 
 	private float CalculateDistance()
 	{
-		return Vector3.Distance (hand.transform.position, neck.transform.position + new Vector3(0f, 0f, -0.08f));
+		return Vector3.Distance (hand.transform.position, head.transform.position);
 	}
 
 	public void Start()
@@ -76,13 +76,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	public void Update()
 	{		
 		UpdatePoints ();
-
-		float angle = Vector3.Cross (hnd - el, el - shd).magnitude;
-		Debug.Log ("angle " + angle);
-		Debug.Log ("shl " + shd.x + " hnd " + hnd.x);
-
-		Debug.Log ("pravi angle " + Vector3.Angle (hnd - el, el - shd));
-
+		
 		if (!gestureEnabled)
 			return;
 
@@ -95,7 +89,8 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			if (dist < distanceTreshold) {
 				gestureStarted = true;
 			}
-		} else {
+		} 
+		else {
 			cnt++;
 
 			if (cnt >= 60) {
@@ -107,7 +102,6 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			//Debug.Log (scale + " Scale now");
 			if (distance >= scale - requiredConfidence && distance <= scale + requiredConfidence) 
 			{
-
 				startCnt = true;
 				gestureStarted = false;
 			}
