@@ -12,6 +12,7 @@ TagManager:
   - elbow
   - neck
   - sfera
+  - Shield
   layers:
   - Default
   - TransparentFX
