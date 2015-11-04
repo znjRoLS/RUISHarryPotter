@@ -44,7 +44,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	private bool gestureEnabled = true;
 	private float scale;
 	private GameObject hand;
-	private GameObject neck;
+	private GameObject shoulder;
 	private GameObject head;
 	int cnt = 0;
 	Vector3 shd, el, hnd;
@@ -56,7 +56,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 		skeletonController = FindObjectOfType(typeof(RUISSkeletonController)) as RUISSkeletonController;
 		skeletonManager = FindObjectOfType(typeof(RUISSkeletonManager)) as RUISSkeletonManager;
 		hand = GameObject.FindGameObjectWithTag ("hand");
-		neck = GameObject.FindGameObjectWithTag ("neck");
+		shoulder = GameObject.FindGameObjectWithTag ("Shoulder");
 		head = GameObject.FindGameObjectWithTag ("head");
 		MagicFactory.AddMagic ("throw", 0);
 		magic = MagicFactory.GetMagic ("throw");
@@ -65,7 +65,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 
 	private float CalculateDistance()
 	{
-		return Vector3.Distance (hand.transform.position, head.transform.position);
+		return Vector3.Distance (hand.transform.position, shoulder.transform.position);
 	}
 
 	public void Start()
@@ -87,10 +87,11 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			float dist = CalculateDistance();
 
 			if (dist < distanceTreshold) {
+				Debug.Log ("Gesture started");
 				gestureStarted = true;
 			}
 		} 
-		else {
+		else if(!startCnt) {
 			cnt++;
 
 			if (cnt >= 60) {
@@ -102,6 +103,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			//Debug.Log (scale + " Scale now");
 			if (distance >= scale - requiredConfidence && distance <= scale + requiredConfidence) 
 			{
+				Debug.Log ("Start counting");
 				startCnt = true;
 				gestureStarted = false;
 			}
@@ -112,6 +114,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			cnt2++;
 			if(cnt2 == 5)
 			{
+				Debug.Log ("Throwing");
 				cnt2 = 0;
 				startCnt = false;
 				Magic magic = MagicFactory.GetMagic("throw");

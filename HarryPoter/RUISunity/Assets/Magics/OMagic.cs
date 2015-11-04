@@ -28,7 +28,7 @@ namespace HarryPotter.Magics
 			Debug.Log ("OOO SHAPRE");
 			GameObject sph = GameObject.Instantiate (sphere);
 			sph.transform.position = GameObject.FindGameObjectWithTag ("Player").transform.position;
-			sph.tag = "Shiled";
+			sph.tag = "Shield";
 			GameObject.Destroy (sph, 10f);
 		}
 	}

@@ -17,10 +17,11 @@ namespace HarryPotter.Magics
 	{	
 		public GameObject hand;
 		public GameObject lightningObject;
-
+		public GameObject shoulder;
 		public VMagic (string magicName, int cooldown) : base(magicName)
 		{
-			hand = GameObject.FindGameObjectWithTag ("elbow");
+			hand = GameObject.FindGameObjectWithTag ("hand");
+			shoulder = GameObject.FindGameObjectWithTag ("Shoulder");
 			if (hand == null)
 				Debug.Log ("null hand");
 			lightningObject = GameObject.FindGameObjectWithTag ("lightningObject");
@@ -39,7 +40,7 @@ namespace HarryPotter.Magics
 			RaycastHit rHit;
 
 			ray.origin = hand.transform.position;
-			ray.direction = -hand.transform.forward;
+			ray.direction = hand.transform.position - shoulder.transform.position;
 
 			bool hit = Physics.Raycast (ray, out rHit);
 

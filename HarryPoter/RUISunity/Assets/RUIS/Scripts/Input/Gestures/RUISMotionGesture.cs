@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using HarryPotter.Magics;
-
+using PointData = RUISPointTracker2.PointData;
 
 public class RUISMotionGesture : RUISGestureRecognizer 
 {
 	private int cnt = 0;
 
 	public int _maxSlope = 3;
-	private readonly string configFolderPath = "C:\\Users\\Nordeus\\Downloads\\gestures.txt"; // todo set it where your txt is;
-
+	private readonly string configFolderPath = "C:\\Users\\Nordeus\\Downloads\\gestures1.txt"; // todo set it where your txt is;
+	private readonly string configFolderPath2 = "C:\\Users\\Nordeus\\Downloads\\gestures2.txt";
+	private readonly string configFolderPath3 = "C:\\Users\\Nordeus\\Downloads\\gestures3.txt";
 	private int _minimumLength;
 
 	DtwGestureRecognizer dtwOG;
@@ -65,12 +66,13 @@ public class RUISMotionGesture : RUISGestureRecognizer
 	
 	void Start()
 	{
-		dtwOG = new DtwGestureRecognizer (30, 3, 0);
-		dtwV = new DtwGestureRecognizer (30, 3, 0);
+		dtwOG = new DtwGestureRecognizer (15, 3, 0);
+		dtwV = new DtwGestureRecognizer (25, 3, 0);
+		dtwZ = new DtwGestureRecognizer (30, 3, 0);
 		Debug.Log ("Reading gestures...");
 		dtwOG.ReadAll (configFolderPath);
-		dtwV.ReadAll (configFolderPath);
-		dtwZ.ReadAll (configFolderPath);
+		dtwV.ReadAll (configFolderPath2);
+		dtwZ.ReadAll (configFolderPath3);
 		Debug.Log ("Gestures read!");
 		ruisInput = (RUISPointTracker2) GetComponent ("RUISPointTracker2");
 	}
@@ -100,17 +102,14 @@ public class RUISMotionGesture : RUISGestureRecognizer
 		//Debug.Log (ruisInput.points [ruisInput.points.Count - 1].position);
 		gestureState = false;
 
-		if (ruisInput.points.Count > 10 && Mathf.Abs (ruisInput.AverageCord(3)-head.transform.position.z) > distanceTreshold) 
+		if (ruisInput.points.Count > 10) 
 		{	
 			//NOT SURE IF WE NEED TO check in each iteration. maybe once in some number 
 			string recognized = Recognize (ruisInput.points, colliders);
-			Magic magic = MagicFactory.GetMagic("VShape");
-			magic.TryActivate();
 			if (!recognized.Contains ("UNKNOWN")) 
 			{	
-				Debug.Log (recognized);
-				//Magic magic = MagicFactory.GetMagic(recognized);
-				//magic.TryActivate();
+				Magic magic = MagicFactory.GetMagic(recognized);
+				magic.TryActivate();
 				gestureState = true;
 			}
 		}
@@ -121,7 +120,7 @@ public class RUISMotionGesture : RUISGestureRecognizer
 	{
 		double minimum = double.PositiveInfinity;
 		string result = "UNKNOWN";
-		double v = dtwV.Recognize (seq1, colliders),
+		double v = dtwV.Recognize (seq1, colliders, true),
 		z = dtwZ.Recognize (seq1, colliders),
 		o = dtwOG.Recognize (seq1, colliders);
 		if (minimum > v) 

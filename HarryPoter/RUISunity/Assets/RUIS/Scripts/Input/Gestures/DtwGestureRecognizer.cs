@@ -177,7 +177,7 @@ public class DtwGestureRecognizer
     /// </summary>
     /// <param name="seq">The sequence to recognise</param>
     /// <returns>The recognised gesture name</returns>
-	public string Recognize(List<PointData> seq1,Transform[] colliders)
+	/*public string Recognize(List<PointData> seq1,Transform[] colliders)
     {
 		List<PointData> seq = Preprocess (seq1);
 		for (int i=0; i<Mathf.Min(40, seq.Count); i++)
@@ -214,8 +214,39 @@ public class DtwGestureRecognizer
 			queueZaRoskaDaMozeDaPrati.Enqueue (minDist);
 		}
 
-		return (minDist < _globalThreshold ? classification : "UNKNOWN")/*+minDist.ToString()*/;
-    }
+		return (minDist < _globalThreshold ? classification : "UNKNOWN");
+    }*/
+
+	public double Recognize(List<PointData> seq1,Transform[] colliders, bool update = false)
+	{
+		List<PointData> seq = Preprocess (seq1);
+		if (update) {
+			for (int i=0; i<Mathf.Min(40, seq.Count); i++)
+				if (!float.IsInfinity (seq [i].position.x) && !float.IsInfinity (seq [i].position.y))
+					colliders [i].position = seq [i].position - new Vector3 (0, 0, seq [i].position.z);
+				else
+					colliders [i].position = new Vector3 (0, 0, 0);
+		}
+		double minDist = double.PositiveInfinity;
+		string classification = "UNKNOWN";
+		for (int i = 0; i < _sequences.Count; i++)
+		{
+			var example = _sequences[i];
+			////Debug.WriteLine(Dist2((double[]) seq[seq.Count - 1], (double[]) example[example.Count - 1]));
+			if (Dist2(seq[seq.Count - 1], example[example.Count - 1]) < _firstThreshold)
+			{
+				double d = Dtw(example, seq);
+				
+				if (d < minDist)
+				{
+					minDist = d;
+					classification = (string)_labels[i];
+				}
+			}
+		}
+		
+		return (minDist < _globalThreshold ? minDist : double.PositiveInfinity)/*+minDist.ToString()*/;
+	}
 
     public List<PointData> Average(List<PointData> list)
     {
