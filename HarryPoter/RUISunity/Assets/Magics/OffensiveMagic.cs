@@ -9,6 +9,8 @@
 //------------------------------------------------------------------------------
 using System;
 using HarryPotter.Magics;
+using UnityEngine;
+
 namespace HarryPotter.Magics
 {
 	public abstract class OffensiveMagic : Magic
@@ -30,7 +32,7 @@ namespace HarryPotter.Magics
 		{
 			throwMagic = MagicFactory.GetMagic ("throw") as ThrowMagic;
 			//Effect ();
-			throwMagic.magics.Enqueue (this);
+			throwMagic.Enqueue(this);
 		}
 	}
 }

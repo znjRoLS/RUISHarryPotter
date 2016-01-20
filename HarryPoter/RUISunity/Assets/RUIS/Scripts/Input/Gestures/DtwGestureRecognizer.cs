@@ -41,6 +41,7 @@ public class DtwGestureRecognizer
 
 	Queue<double> queueZaRoskaDaMozeDaPrati = new Queue<double>();
 	int asd=0;
+	//private StreamWriter sw = new StreamWriter (new FileStream(@"E:\\Z.txt", FileMode.OpenOrCreate));
     /// <summary>
     /// Maximum distance between the last observations of each sequence.
     /// </summary>
@@ -108,28 +109,30 @@ public class DtwGestureRecognizer
 
 	public void ReadAll(string path)
 	{
-		Debug.Log (path);
+		//Debug.Log (path);
 		TextReader tr = new StreamReader(path);
 		string line;
 
 		while ((line = tr.ReadLine()) != null)    //read till end 
 		{
+		//	Debug.Log (line);
 			string[] columns = line.Split (' ');
 
 			string label = columns[0];
-			//int cooldown = Convert.ToInt32(columns[1]);
-			int cooldown = 1;
+			int cooldown = Convert.ToInt32(columns[1]);
+
 			MagicFactory.AddMagic(label, cooldown);
 
 			List<PointData> points = new List<PointData> ();
 
-			for(int i=1; i < columns.Length; i+=2)
+			for(int i=2; i < columns.Length; i+=2)
 			{
 
-				float x = float.Parse(columns[i]);
-				float z = float.Parse (columns[i+1]);
-
-				points.Add (new PointData(new UnityEngine.Vector3(x, z, 0), new UnityEngine.Quaternion(), 0.1f, 0.1f, null)); 
+				float z = float.Parse(columns[i]);
+				float y = float.Parse (columns[i+1]);
+				//Debug.Log (x + "x");
+				//Debug.Log (z + "z");
+				points.Add (new PointData(new UnityEngine.Vector3(0, y, z), new UnityEngine.Quaternion(), 0.1f, 0.1f, null)); 
 			}
 
 			AddOrUpdate(points, label);
@@ -148,15 +151,15 @@ public class DtwGestureRecognizer
         // First we check whether there is already a recording for this label. If so overwrite it, otherwise add a new entry
         int existingIndex = -1;
 
-        for (int i = 0; i < _labels.Count; i++)
-        {
-            if ((string)_labels[i] == lab)
-            {
-                existingIndex = i;
-            }
-        }
+      //  for (int i = 0; i < _labels.Count; i++)
+        //{
+         //   if ((string)_labels[i] == lab)
+         //   {
+        //        existingIndex = i;
+        //    }
+   //     }
 
-		List<PointData> seq = Preprocess (seq1);
+		List<PointData> seq = Preprocess (seq1, false);
 
         // If we have a match then remove the entries at the existing index to avoid duplicates. We will add the new entries later anyway
         if (existingIndex >= 0)
@@ -221,18 +224,23 @@ public class DtwGestureRecognizer
 	{
 		List<PointData> seq = Preprocess (seq1);
 		if (update) {
-			for (int i=0; i<Mathf.Min(40, seq.Count); i++)
-				if (!float.IsInfinity (seq [i].position.x) && !float.IsInfinity (seq [i].position.y))
-					colliders [i].position = seq [i].position - new Vector3 (0, 0, seq [i].position.z);
-				else
+			for (int i=0; i<Mathf.Min (seq.Count, colliders.Length); i++)
+				if (!float.IsInfinity (seq [i].position.z) && !float.IsInfinity (seq [i].position.y)) {
+				colliders [i].position = seq [i].position - new Vector3 (seq [i].position.x, 0, 0);
+				}
+				else{
+
 					colliders [i].position = new Vector3 (0, 0, 0);
+				}
 		}
 		double minDist = double.PositiveInfinity;
 		string classification = "UNKNOWN";
 		for (int i = 0; i < _sequences.Count; i++)
 		{
 			var example = _sequences[i];
-			////Debug.WriteLine(Dist2((double[]) seq[seq.Count - 1], (double[]) example[example.Count - 1]));
+			//Debug.Log(seq[seq.Count - 1].position + "seq");
+			//Debug.Log(example[example.Count - 1].position + "ex");
+			//Debug.Log(Dist2(seq[seq.Count - 1], example[example.Count - 1])+ "HEHEHHEHEHEE");
 			if (Dist2(seq[seq.Count - 1], example[example.Count - 1]) < _firstThreshold)
 			{
 				double d = Dtw(example, seq);
@@ -244,7 +252,9 @@ public class DtwGestureRecognizer
 				}
 			}
 		}
-		
+
+		//Debug.Log (minDist + "minDist");
+
 		return (minDist < _globalThreshold ? minDist : double.PositiveInfinity)/*+minDist.ToString()*/;
 	}
 
@@ -261,7 +271,7 @@ public class DtwGestureRecognizer
 		return list;
     }
 
-    public List<PointData> Preprocess(List<PointData> a)
+    public List<PointData> Preprocess(List<PointData> a, bool check = true)
     {
 		List<PointData> b = new List<PointData> ();
 		//Debug.Log ("a" + a.Count);
@@ -273,7 +283,7 @@ public class DtwGestureRecognizer
 		//Debug.Log ("b " + b.Count);
 		if (b.Count == 0)
 			return a;
-		return Normalize(b, -2, 2);
+		return Normalize(b, -30, 30, check);
     }
     /// <summary>
     /// Retrieves a text represeantation of the _label and its associated _sequence
@@ -408,30 +418,30 @@ public class DtwGestureRecognizer
     private double Dist2(PointData a, PointData b)
     {
         float d = 0;
-		d += (a.position.x - b.position.x) * (a.position.x - b.position.x);
+		d += (a.position.z - b.position.z) * (a.position.z - b.position.z);
 		d += (a.position.y - b.position.y) * (a.position.y - b.position.y);
         return Math.Sqrt(d);
     }
 	   
-    public List<PointData> Normalize(List<PointData> data, float _minBoundary, float _maxBoundary)
+	public List<PointData> Normalize(List<PointData> data, float _minBoundary, float _maxBoundary, bool checkDist = true)
     {
 		//Debug.Log ("lll");
 		//Debug.Log ("lallala " + data.Count);
-		float midX = (data.Max(x => x.position.x) + data.Min(x => x.position.x)) / 2;
+		float midZ = (data.Max(x => x.position.z) + data.Min(x => x.position.z)) / 2;
 		float midY = (data.Max(x => x.position.y) + data.Min(x => x.position.y)) / 2;
 		for (int i = 0; i < data.Count; i++)
-			data [i].position -= new Vector3(midX, midY, 0);
+			data [i].position -= new Vector3(0, midY, midZ);
 
 		//Debug.Log (data [4].position);
 
 		//TODO YOU CHANGED THIS REMOVE MAYBE
-		float min = Math.Min(data.Min(x => Math.Abs (x.position.x)), data.Min(x => Math.Abs (x.position.y)));
-		float max = Math.Max(data.Max(x => Math.Abs (x.position.x)), data.Max(x => Math.Abs(x.position.y)));
-
-		if ( max <0.06) {
+		float min = Math.Min(data.Min(x => Math.Abs (x.position.z)), data.Min(x => Math.Abs (x.position.y)));
+		float max = Math.Max(data.Max(x => Math.Abs (x.position.z)), data.Max(x => Math.Abs(x.position.y)));
+		//Debug.Log (max-min + "MINIMAX");
+		if (max-min <3 && checkDist) {
 			for (int i = 0; i < data.Count; i++) {
-				data [i].position.x = float.PositiveInfinity;
 				data [i].position.y = float.PositiveInfinity;
+				data [i].position.z = float.PositiveInfinity;
 			}
 			//Debug.Log ("ZASTO??????");
 		} 

@@ -1,0 +1,108 @@
+fileFormatVersion: 2
+guid: e6758584c64ea624f93ce26f8ff5c527
+timeCreated: 1450716235
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 00.000_Mesh.004_Mater_00.000_Mesh.004_Mater_Material.004_Arnold_g_Arnold_glasses.png
+    100002: 00.002_Mesh.005_Mater_00.002_Mesh.005_Mater_Material.005_Arnold_g_Arnold_glasses_2.png
+    100004: 00.004_Mesh.006_Mater_00.004_Mesh.006_Mater_Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+    100006: Object.000_Mesh.000_M_Object.000_Mesh.000_M_Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+    100008: Object.001_Mesh.001_M_Object.001_Mesh.001_M_Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+    100010: Object.002_Mesh.002_M_Object.002_Mesh.002_M_Material.002_T3_Arnol_T3_Arnold_eye.dds
+    100012: Object.003_Mesh.003_M_Object.003_Mesh.003_M_Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+    100014: //RootNode
+    400000: 00.000_Mesh.004_Mater_00.000_Mesh.004_Mater_Material.004_Arnold_g_Arnold_glasses.png
+    400002: 00.002_Mesh.005_Mater_00.002_Mesh.005_Mater_Material.005_Arnold_g_Arnold_glasses_2.png
+    400004: 00.004_Mesh.006_Mater_00.004_Mesh.006_Mater_Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+    400006: Object.000_Mesh.000_M_Object.000_Mesh.000_M_Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+    400008: Object.001_Mesh.001_M_Object.001_Mesh.001_M_Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+    400010: Object.002_Mesh.002_M_Object.002_Mesh.002_M_Material.002_T3_Arnol_T3_Arnold_eye.dds
+    400012: Object.003_Mesh.003_M_Object.003_Mesh.003_M_Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+    400014: //RootNode
+    2300000: 00.000_Mesh.004_Mater_00.000_Mesh.004_Mater_Material.004_Arnold_g_Arnold_glasses.png
+    2300002: 00.002_Mesh.005_Mater_00.002_Mesh.005_Mater_Material.005_Arnold_g_Arnold_glasses_2.png
+    2300004: 00.004_Mesh.006_Mater_00.004_Mesh.006_Mater_Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+    2300006: Object.000_Mesh.000_M_Object.000_Mesh.000_M_Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+    2300008: Object.001_Mesh.001_M_Object.001_Mesh.001_M_Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+    2300010: Object.002_Mesh.002_M_Object.002_Mesh.002_M_Material.002_T3_Arnol_T3_Arnold_eye.dds
+    2300012: Object.003_Mesh.003_M_Object.003_Mesh.003_M_Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+    3300000: 00.000_Mesh.004_Mater_00.000_Mesh.004_Mater_Material.004_Arnold_g_Arnold_glasses.png
+    3300002: 00.002_Mesh.005_Mater_00.002_Mesh.005_Mater_Material.005_Arnold_g_Arnold_glasses_2.png
+    3300004: 00.004_Mesh.006_Mater_00.004_Mesh.006_Mater_Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+    3300006: Object.000_Mesh.000_M_Object.000_Mesh.000_M_Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+    3300008: Object.001_Mesh.001_M_Object.001_Mesh.001_M_Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+    3300010: Object.002_Mesh.002_M_Object.002_Mesh.002_M_Material.002_T3_Arnol_T3_Arnold_eye.dds
+    3300012: Object.003_Mesh.003_M_Object.003_Mesh.003_M_Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+    4300000: 00.000_Mesh.004_Mater_00.000_Mesh.004_Mater_Material.004_Arnold_g_Arnold_glasses.png
+    4300002: 00.002_Mesh.005_Mater_00.002_Mesh.005_Mater_Material.005_Arnold_g_Arnold_glasses_2.png
+    4300004: 00.004_Mesh.006_Mater_00.004_Mesh.006_Mater_Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+    4300006: Object.000_Mesh.000_M_Object.000_Mesh.000_M_Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+    4300008: Object.001_Mesh.001_M_Object.001_Mesh.001_M_Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+    4300010: Object.002_Mesh.002_M_Object.002_Mesh.002_M_Material.002_T3_Arnol_T3_Arnold_eye.dds
+    4300012: Object.003_Mesh.003_M_Object.003_Mesh.003_M_Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

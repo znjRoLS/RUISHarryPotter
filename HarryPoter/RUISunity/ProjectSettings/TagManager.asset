@@ -15,6 +15,26 @@ TagManager:
   - Shield
   - Spine
   - Shoulder
+  - Deementor
+  - ZMagicBullet
+  - Floor
+  - Scripts
+  - purple
+  - purpleLight
+  - images
+  - img
+  - blast
+  - cameraHERE
+  - gameOverLight
+  - UI
+  - CenterEyeAnchor
+  - Enemy
+  - SlowDeementor
+  - AboutToKillMe
+  - lhand
+  - lShoulder
+  - ignore
+  - HP
   layers:
   - Default
   - TransparentFX

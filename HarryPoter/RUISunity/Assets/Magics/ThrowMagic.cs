@@ -11,22 +11,34 @@ using System;
 using System.Collections.Generic;
 using HarryPotter.Magics;
 using UnityEngine;
-
+using System.Linq;
+using UnityEngine.UI;
 namespace HarryPotter.Magics
 {
+
+
 	public class ThrowMagic : Magic
 	{
-		internal Queue<Magic> magics = new Queue<Magic>();
+		internal List<Magic> magics = new List<Magic>();
+
+		private GameObject[] images;
+		
+		private GameObject scripts = GameObject.FindGameObjectWithTag("Scripts");
 
 		public ThrowMagic(string magicName) : base(magicName)
 		{
+			images = GameObject.FindGameObjectsWithTag ("img");
+			foreach (var img in images)
+				img.GetComponent<Image> ().enabled = false;
+			images.OrderByDescending(x=>x.name);
+			Debug.Log ("IMAGE COUNT" + images.Length);
 		}
 
 		public override void Effect()
 		{
 			try
 			{
-				Magic magicToThrow = magics.Dequeue();
+				Magic magicToThrow = Dequeue ();
 				magicToThrow.Effect ();
 			}
 
@@ -36,10 +48,73 @@ namespace HarryPotter.Magics
 			}
 		}
 
+		public void ClearBuffer()
+		{
+			while (magics.Count > 0)
+				Dequeue ();
+		}
+
 		protected override void Activate()
 		{
 			Effect ();
 		}
+
+		Magic Dequeue()
+		{
+			try
+			{
+				Magic magicToThrow = magics[0];
+				magics.RemoveAt (0);
+
+				foreach(var img in images)
+				{
+					img.GetComponent<Image>().enabled = false;
+				}
+
+				for(int i=0; i<magics.Count; i++)
+				{
+					images[i].GetComponent<Image>().sprite = magics[i].sprite;
+					images[i].GetComponent<Image>().enabled = true;
+				}
+
+				return magicToThrow;
+			}
+			
+			catch(Exception e)
+			{
+				Debug.Log ("No magic to throw!");
+				scripts.GetComponent<DisplayText>().ShowText("No magic to throw!");
+				return null;
+			}
+			//scripts.GetComponent<DisplayText>();
+		}
+
+		public void Enqueue(Magic m)
+		{
+			if (magics.Count >= 3) {
+				scripts.GetComponent<DisplayText> ().ShowText ("Too many magics!");
+				return;
+			}
+				
+			magics.Add (m);
+
+			foreach(var img in images)
+			{
+				img.GetComponent<Image>().enabled = false;
+			}
+
+			int i=0;
+
+
+			for(i=0; i<magics.Count; i++)
+			{
+				Debug.Log(magics[i].magicName + " ENQ" );
+				images[i].GetComponent<Image>().sprite = magics[i].sprite;
+				images[i].GetComponent<Image>().enabled = true;
+			}
+		}
+
+
 	}
 }
 

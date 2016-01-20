@@ -1,0 +1,79 @@
+# Blender3D MTL File: COS.blend
+# Material Count: 7
+newmtl Material_T3_Arnold_Te_T3_Arnold_Teeth.dds
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.047686 0.047686 0.047686
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd T3_Arnold_Teeth.dds
+
+
+newmtl Material.002_T3_Arnol_T3_Arnold_eye.dds
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.261020 0.261020 0.261020
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd T3_Arnold_eye.dds
+
+
+newmtl Material.001_T3_Arnol_T3_Arnold_biker_v00.d
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.032627 0.032627 0.032627
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd T3_Arnold_biker_v00.dds
+
+
+newmtl Material.006_T3_Arnol_T3_Arnold_biker_v00.d
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.032627 0.032627 0.032627
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd T3_Arnold_biker_v00.dds
+
+
+newmtl Material.005_Arnold_g_Arnold_glasses_2.png
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.052706 0.052706 0.052706
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Arnold glasses 2.png
+
+
+newmtl Material.003_T3_Arnol_T3_Arnold_biker_v00.d
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.032627 0.032627 0.032627
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd T3_Arnold_biker_v00.dds
+
+
+newmtl Material.004_Arnold_g_Arnold_glasses.png
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.052706 0.052706 0.052706
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Arnold glasses.png
+
+

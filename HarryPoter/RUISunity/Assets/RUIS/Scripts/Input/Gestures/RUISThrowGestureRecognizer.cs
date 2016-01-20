@@ -76,7 +76,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	public void Update()
 	{		
 		UpdatePoints ();
-		
+
 		if (!gestureEnabled)
 			return;
 
@@ -85,7 +85,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 			cnt = 0;
 
 			float dist = CalculateDistance();
-
+			//Debug.Log (dist);
 			if (dist < distanceTreshold) {
 				Debug.Log ("Gesture started");
 				gestureStarted = true;
@@ -94,7 +94,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 		else if(!startCnt) {
 			cnt++;
 
-			if (cnt >= 60) {
+			if (cnt >= 45) {
 				gestureStarted = false;
 			}
 
@@ -112,7 +112,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 		if (startCnt) 
 		{
 			cnt2++;
-			if(cnt2 == 5)
+			if(cnt2 == 30)
 			{
 				Debug.Log ("Throwing");
 				cnt2 = 0;
@@ -145,7 +145,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 	}
 	
 	public void UpdatePoints()
-	{
+	{/*
 
 		Windows.Kinect.Body[] nekibody = SourceManager.GetComponent<Kinect2SourceManager>().GetBodyData ();
 		if (nekibody != null && nekibody.Length > 0) {
@@ -183,7 +183,7 @@ public class RUISThrowGestureRecognizer : RUISGestureRecognizer
 		//	shd = skeletonManager.GetJointData(Joint.RightShoulder, playerId, bodyTrackingDeviceID).position;
 		//	el = skeletonManager.GetJointData(Joint.RightElbow, playerId, bodyTrackingDeviceID).position;
 		//	hnd = skeletonManager.GetJointData(Joint.RightHand, playerId, bodyTrackingDeviceID).position;
-		//}
+		//}*/
 	}
 
 	public void ClearPoints()

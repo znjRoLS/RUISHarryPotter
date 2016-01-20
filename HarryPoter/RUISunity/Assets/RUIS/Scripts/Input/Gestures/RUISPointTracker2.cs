@@ -81,11 +81,12 @@ public class RUISPointTracker2 : MonoBehaviour {
 		//Debug.Log ("pos  "+hand.transform.position);
 		//Debug.Log ("pp x"+hand.transform.TransformPoint(Vector3.zero).x+" pp y "+hand.transform.TransformPoint(Vector3.zero).y
 		//           +" pp z"+hand.transform.TransformPoint(Vector3.zero).z);
+
 		PointData newPoint = new PointData(hand.transform.TransformPoint(Vector3.zero), hand.transform.localRotation, timeSinceLastUpdate, Time.timeSinceLevelLoad, previousPoint);
 		
 		//remove zero velocities just in case, in order for the speeds not to get polluted by nonexisting data
 		//if (newPoint.velocity == Vector3.zero) return;
-		
+
 		points.Add(newPoint);
 		previousPoint = newPoint;
 		
@@ -93,8 +94,10 @@ public class RUISPointTracker2 : MonoBehaviour {
 		{
 			points.RemoveAt(0);
 		}
+
+
 		//Debug.Log (points.Count + " br");
-		int maks = Math.Min (50, points.Count);
+		int maks = Math.Min (colliders.Length, points.Count);
 		//Debug.Log ("maks " + maks);
 		for (int i=0; i<maks; i++) {
 			//Debug.Log ("pp x"+points [i].position.x);

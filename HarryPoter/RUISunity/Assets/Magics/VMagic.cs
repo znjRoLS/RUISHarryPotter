@@ -20,6 +20,7 @@ namespace HarryPotter.Magics
 		public GameObject shoulder;
 		public VMagic (string magicName, int cooldown) : base(magicName)
 		{
+			sprite = sprite = Resources.Load<Sprite> ("blueLightning");
 			hand = GameObject.FindGameObjectWithTag ("hand");
 			shoulder = GameObject.FindGameObjectWithTag ("Shoulder");
 			if (hand == null)
@@ -36,25 +37,69 @@ namespace HarryPotter.Magics
 			Debug.Log ("EFFECT V !!!");
 
 			Ray ray = new Ray();
-
+			/*
 			RaycastHit rHit;
 
 			ray.origin = hand.transform.position;
 			ray.direction = hand.transform.position - shoulder.transform.position;
 
 			bool hit = Physics.Raycast (ray, out rHit);
+*/
+			GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+			float distanceMin = float.MaxValue;
+			int idxMin = 0;
 
-			Debug.Log ( "rhit logs " + rHit );
+			for (int i=0; i<enemies.Length; i++) {
+				if(distanceMin > Vector3.Angle(hand.transform.position - shoulder.transform.position, enemies[i].transform.position - hand.transform.position))
+				{
+					distanceMin= Vector3.Angle(hand.transform.position - shoulder.transform.position, enemies[i].transform.position - hand.transform.position);
+					idxMin = i;
+				}
+			}
+
+			Vector3 v3 = hand.transform.position - shoulder.transform.position;
+			if (distanceMin < 17) {
+				//Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA "+distanceMin);
+				v3=(hand.transform.position - shoulder.transform.position)/(hand.transform.position - shoulder.transform.position).magnitude+
+					(enemies[idxMin	].transform.position - hand.transform.position)/(enemies[idxMin].transform.position - hand.transform.position).magnitude;
+			}
+			RaycastHit rHit;
+			
+			ray.origin = hand.transform.position;
+			ray.direction = v3;
+			
+			bool hit = Physics.Raycast (ray, out rHit);
+
+
+			//Debug.Log ( "rhit logs " + rHit );
 
 			GameObject lightning = (GameObject)MonoBehaviour.Instantiate(lightningObject);
-			
+
+			GameObject hitObj = rHit.transform.gameObject;
+			if (hitObj.tag == "Deementor" || hitObj.tag == "SlowDeementor" ) {
+				hitObj.GetComponent<EnemyHealth>().Harm(50);
+			}
+			Vector3 hitPoint = rHit.point;
+			if (hitObj.tag == "Enemy") {
+				hitObj.GetComponent<EnemyHealth>().Harm(100);
+				hitPoint = hitObj.transform.position;
+			}
+
 			if (hit) {
-				lightning.transform.position = (hand.transform.position + rHit.point)/2;
-				Debug.Log ("transform hand " + hand.transform.position);
-				Debug.Log ("transform light " + lightning.transform.position);
-				Debug.Log ("transform rhit " + rHit.point);
-				Debug.DrawLine ( hand.transform.position, rHit.point, Color.red, 1000.0f );
-				Debug.DrawRay (hand.transform.position, hand.transform.forward, Color.red);
+				Vector3 diff = v3;
+				lightning.transform.position = (hand.transform.position + hitPoint)/2;
+				lightning.transform.rotation = Quaternion.LookRotation(diff.normalized);
+
+				//lightning.transform.LookAt(diff);
+
+				//Debug.Log("ive hit " + rHit.transform.gameObject);
+				//Debug.Log ("vector diff " + diff);
+				//Debug.Log ("vector diff rotation " + Quaternion.LookRotation(diff.normalized));
+				//Debug.Log ("transform hand " + hand.transform.position);
+				//Debug.Log ("transform light " + lightning.transform.position);
+				//Debug.Log ("transform rhit " + rHit.point);
+				//Debug.DrawLine ( hand.transform.position, rHit.point, Color.red, 1000.0f );
+				//Debug.DrawRay (hand.transform.position, hand.transform.forward, Color.red);
 			}
 			else
 				lightning.transform.position = (hand.transform.position + Vector3.forward * 10)/2;
@@ -66,12 +111,12 @@ namespace HarryPotter.Magics
 			Vector3 pathBetween = rHit.point - hand.transform.position;
 			//Vector3 pathBetween = Vector3.forward * 100;
 
-			lightning.transform.eulerAngles = new Vector3 (0,0,0);
+			//lightning.transform.eulerAngles = new Vector3 (0,0,0);
 			//lightning.transform.eulerAngles = new Vector3(90,180  + Mathf.Rad2Deg * Mathf.Atan( (float)pathBetween.x / pathBetween.z ),180 );
 			
 			lightning.transform.localScale = pathBetween.magnitude/80 * Vector3.one;
 
-			MonoBehaviour.Destroy ( lightning , 100f);
+			MonoBehaviour.Destroy ( lightning , 0.5f);
 		}
 	}
 }

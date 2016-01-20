@@ -14,14 +14,23 @@ namespace HarryPotter.Magics
 {
 	public class ZMagic : OffensiveMagic
 	{
+		public float blastRepeat ;
+
 		public ZMagic (string magicName, int cooldown) : base(magicName)
 		{
+			sprite = sprite = Resources.Load<Sprite> ("blast");
+			//blastEffect = GameObject.FindGameObjectWithTag ("blast");
+			//if (blastEffect == null)
+			//	Debug.Log ("null blastEffect");
 			this.cooldown = cooldown;
 		}
 
 		public override void Effect()
 		{
-			Debug.Log ("ZZZZZZZZZZ");
+			Debug.Log ("EFFECT ZZZZZZZZZZ");
+
+			GameObject.FindGameObjectWithTag ("Scripts").GetComponent<CreateBullets> ().ThrowZMagic ();
+
 		}
 	}
 }

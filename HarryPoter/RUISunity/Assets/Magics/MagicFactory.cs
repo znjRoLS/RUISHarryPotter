@@ -37,6 +37,8 @@ namespace HarryPotter.Magics
 				return new OMagic(magicName, cooldown);
 			case "VShape":
 				return new VMagic(magicName, cooldown);
+			case "KShape":
+				return new KMagic(magicName, cooldown);
 			case "throw":
 				return new ThrowMagic(magicName);
 			default:
